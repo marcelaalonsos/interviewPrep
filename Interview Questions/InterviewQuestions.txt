@@ -55,14 +55,18 @@ node is a runtime environment that executes javascript on the server side.
 it's the ecmascript for javascript released in 2016
 
 15. tell me about a time where you made a mistake?
+talk about that time when i used incomplete information to design, but saved the day because it was on phases, and used that experience to improve on the process and avoid mistakes
 
 16. what attracted you to the role?
+my experience aligns with the agile ennvironments, the frontend stack the team uses for development, the opportunity to learn from an established team and grow my knowledge, collaborate with other people and teams, and major league baseball is historic but always on the edge of technology from above all other leagues.
 
 17. How do you work in teams and independently?
 
 18. how do you stay organized remotely?
+block of calendar to execute tasks, set daily / weekly goals / meet with people when I'm stuck on something and need guidance / know when to ask for help
 
 19. tell me about yourself
+i spent my first 9 years of experience in the arch and real estate industries...
 
 20. what are your salary requirements.
 
