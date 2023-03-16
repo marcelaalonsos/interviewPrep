@@ -1,0 +1,69 @@
+Common software engineer questions w/answers
+
+1. What programming languages are you familiar with?
+I am proficient in JavaScript, and just started learning Java. In my experience, I worked mainly with JavaScript to develop full stack applications. I like that JavaScript is dynamic in that it can be both an object-oriented imperative language, and also declarative, which made it more intuitive to learn in the past year. And now learning Java, it has provided me with a good foundation to understand classes and methods, and manipulating datatypes.
+
+2. Describe the last project you worked on.
+Toad's Garden - make sure to describe what and why of this game.
+Capstone project developed with 3 other engineers
+why? we wanted to create a non-violent gaming experience that gives the player peace and joy after a long day while playing it.
+what? a single-player, platformer, arcade-style game, inspired by Toad, the non-playable character from Mario.
+The player traverses through 3 nature-inspired worlds, collecting tokens and avoiding enemies represented by wildlife.
+how? I worked on creating the enemies Toad encounters per level, open source sprite sheets, converting them into files that could be loaded into the IDE, and using Phaser 3's built-in functionalities to create functions that render, animate and mutate these spritesheets.
+challenges? Phaser 3 has very limited documentation, and not testing-friendly, so it was a lot of try and error, debugging by creating console logs, and researching older projects and tutorials online.
+I can send you the deployed link for you to play -hope we have not exceded the hour limit by now.
+
+3. What process would you use to build a web application?
+Take for example, we had to create an e-commerce application. First on the PLANNING - we defined what the application requirements are and what the mvp should be. Next, ANALYZE each requirement and dissect it into tiers of functionality, creating user stories helps build that process. To DESIGN the application, determine what frontend and backend technologies will be needed, it defnitely needed to have a database to handle product inventory and users information, so created the schemas and the relationship between them -we would use a SQL database with PostgreSQL. To actually IMPLEMENT this application, work in pairs to understand the soruce code logic and make sure it is modular, scalable and easy to read, and not just 4 different projects mashed into one. Write TESTS to verify if functionality was doing what it was supposed to, but also have the chance to beta test from peers. we did not get the chance to DEPLOY, but being a react app, with a database, could have used render or netifly. vercel would work best for next.js. one aspect for MAINTENANCE in the future, was
+
+4. What is "agile" software development and what are your thoughts on it?
+The bootcamp was modeled to work with agile methodologies, focused on having a working application and how it is delivered by a team as a whole. every week we had to develop applications with changing requirements as we were learning new tech stacks, and for the group projects, we defined our work contract based on those methodologies. Having daily standups to track progress and advise on aspects someone from the team would be blocked on, and weekly code reviews to ensure the implementation is readable, and scalable.
+
+5. on PostgreSQL - what are the benefits / difference of a SQL vs NoSQL?
+I can definitely see the benefits of implementing a relational database management system for such a data-heavy organization like major league baseball. Baseball, of all the sports, stats matter the most -RBIs, OBPs, you name it. to store multiple rows of players in tables with fixed attributes, and establish those schemas with the teams they belong to, you definitely need that structure. I know you use Redis -which is a noSQL database, i can see those benefits as well for real-time analytics -storing large amounts of data in key-value pairs, for streaming, gaming, social media - you get user profiles, manage state for game scores, etc.
+
+6. Talk about React - can you explain class components vs functional components.
+Current version of React 18.2
+before version 16.8 state was handled through creating classes from react components, that were they own file and its basically instantiating html. they required lifecycle methods (didMount, didUnmount), this bindings, constructor, and render statement.
+functional components are basically creating an object that has functions on it, that when you instantiate it returns html.
+the difference is in the use of hooks. hooks are more efficient at managing the lifecycle (state) of the components without refactoring as it did before. hooks don't work inside classes. with hooks you can share state and logic between components -like useContext. less coding.
+
+7. what is middleware and how does it work?
+middleware is a software that applications use to communicate with each other, communicates frontend requests with backend responses, no matter if its a windows frontend application to a linux backend server. I'm more familiar using Express to handle middleware functions such as GET, PUT, POST for any type of HTTP requests to the backend. It also comes with built-ins for static files like html, json parsing that parses incoming requests and being able to read them, and urlencoding to parse incoming requests with url-payloads.
+
+8. how do you version control with git/github?
+If working within an organization, i would clone the repository and checkout the main branch by creating my own -that way I can work asyncronous and pull any new changes that have been merged to the main branch by other colleagues. Most importantly, adding reviews before merging to prevent conflicts or loss of work. always pushing to local branch first, then opening a pull request to merge the work. I try to make a copy of my code on a text file just in case something goes absoltely wrong and I have to stash my branch. keep clarity with commits' messaging -not just for me, but for the tracking of progress for other people and files.
+
+9. have you used the CLI and it what ways?
+yes, first and foremost to navigate between directories. but most importantly to initialize git commands and all version control commands, set up node environments for applications including installing libraries and dependencies, for running build commands, to run testing - the CLI is everything - I use windows terminal mostly, but for source control I do it directly in the IDE.
+in windows terminal, it is very clunky to make new files, so I do end up using the GUI or the explorer on the IDE.
+
+10. Talk through your debugging process - how do you manage that?
+first and foremost, i go to the dev tools and read through the error stack, or if I'm using a testing like jasmine or mocha, directly on the terminal. then i see what type of error is -if its a syntax then i read through the stack and identify the file and line where the error originated and fix whether i missed a bracket or something. for more complex errors, i turn to stack overflow or the documentation from a specific tech stack and see what it is about and how to fix it. console.logs are super useful specially when its a logic error and see what's actually doing. if it's becoming too time consuming, I turn for help from my peers or a senior developer, a bug, an error is nothing to be discouraged by and actually a good learning opportunity. also my motto is "if by fixing errors, you get new errors, you are on a right path to uncover what's going on".
+
+11. How do you explain technical challenges to stakeholders who do not have technical knowledge or backgrounds?
+i myself come from a different background to software engineering, so best i can equate it to, is to ground a requirement vs how it affects production, budget or timeline -rather than deciding for the stakeholder, it illustrates what certain requirement impact those fields and either proceed with such, or look for an alternative that will meet current expectations but might not be 100% the experience.
+
+12. what node can and cannot do on frontend / backend?
+one of the caveats of node, because it is single threated it could cause performance issues handling large requests
+
+
+13. how does node and javascript work on the frontend / backend?
+node is a runtime environment that executes javascript on the server side.
+
+14. what does ES2016 mean?
+it's the ecmascript for javascript released in 2016
+
+15. tell me about a time where you made a mistake?
+
+16. what attracted you to the role?
+
+17. How do you work in teams and independently?
+
+18. how do you stay organized remotely?
+
+19. tell me about yourself
+
+20. what are your salary requirements.
+
+

@@ -10,3 +10,4 @@ Topics covered:
 - Frontend review of ReactJS, MUI
 - Backend review of JavaScript, Node.js
 - Database review of PostgreSQL and Sequelize
+- Common questions with answers
