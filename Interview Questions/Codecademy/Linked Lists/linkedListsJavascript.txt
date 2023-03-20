@@ -1,0 +1,48 @@
+Constructor and Adding to head
+
+Let’s implement a linked list in JavaScript. As you might recall, a linked list is a sequential chain of nodes. Remember that a node contains two elements:
+
+- data
+- a link to the next node
+We are going to use a provided Node class, which you can find in Node.js. Make sure to use the proper Node methods throughout the lesson instead of accessing properties directly (ex. use someNode.getNextNode() instead of someNode.next).
+
+Depending on the end-use of the linked list, there are a variety of methods that we can define. For our use, we want to be able to:
+
+- add a new node to the beginning (head) of the list
+- add a new node to the end (tail) of the list
+- remove a node from the beginning (head) of the list
+- print out the nodes in the list in order from head to tail
+
+To start, we are going to create the LinkedList‘s constructor and .addToHead() method.
+
+Adding to tail
+
+Now that we can add to the head of the linked list, the next step is to be able to add to the tail. This will require a few more steps since we don’t have a tail property in our linked list data structure.
+
+To do this, we are going to start with a temporary tail variable that will be set equal to the list’s head. If there is no head, that means that the list is empty, and we will add the node to the head of the list. Otherwise, we will iterate through the list until we find the last node. Once we’ve found the current tail, we will add a pointer from that node to our new tail.
+
+Removing the head
+
+So far we can:
+
+- create a new LinkedList using its constructor
+- add to the head of the list using .addToHead()
+- add to the tail of the list using .addToTail()
+
+Now we’re going to learn how to remove from the head of the list. To do this, we are first going to check to see if the list has a head. If it doesn’t, there is nothing to return. If there is a head, we will remove it by setting the list’s head equal to the original head’s next node, and then return that original head.
+
+Printing
+
+Now we have a bunch of helpful LinkedList methods under our belt. Our next step is to create a .printList() method so we can see our list as it changes.
+
+While it’s possible to just use console.log() on the list (try it!), we want to print it in a more understandable and readable way. console.log() will print the pointers of each node as well as the data, but we’re just going to print the data while maintaining the order of the list.
+
+To do this, we will create a String that holds the data from every node in the list. We’ll start at the list’s head and iterate through the list, adding to our String as we go.
+
+For example, if we had a list for the days of the week, starting with Sunday, .printList() would print it as follows:
+
+<head> Sunday Monday Tuesday Wednesday Thursday Friday Saturday <tail>
+
+Using the Linked List
+
+You finished your LinkedList class! Now we’re going to create an instance of that class and create a linked list of the seasons. We will add to it, remove from it, and finally print it out to check what we’ve done.
