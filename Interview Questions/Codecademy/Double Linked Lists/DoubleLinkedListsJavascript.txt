@@ -1,0 +1,101 @@
+Node Class and Constructor
+
+Let’s implement a doubly linked list in JavaScript. A doubly linked list is a sequential chain of nodes, just like a linked list. The nodes we used for our linked lists contained two elements:
+
+- data
+- a link to the next node
+
+The difference between a doubly linked list and a linked list is that in a doubly linked list, there are pointers to the previous node as well as the next node. This means that the doubly linked list data structure has a tail property in addition to the head property that’s present in the linked list data structure.
+
+Depending on the end-use of the doubly linked list, there are a variety of methods that we can define.
+
+For our use, we want to be able to:
+
+add a new node to the beginning (head) of the list
+add a new node to the end (tail) of the list
+remove a node from the beginning (head) of the list
+remove a node from the end (tail) of the list
+find and remove a specific node by its data
+print out the nodes in the list in order from head to tail
+We will reuse the .printList() method from our LinkedList class, but the rest will either be edited or new.
+
+To start, we are going to look at the updated Node class and create the constructor.
+
+Add to head
+
+In a linked list, we add to the head of the list by checking to see if there is already a head. We then either set the new node as the head (if there was no head) or update the head property, and link the past head to the new head.
+
+Since a doubly linked list has an additional tail property and is built with nodes that each have two pointers, there are a few more steps:
+
+- Start by checking to see if there is a current head to the list
+- If there is (meaning the list is not empty), then we want to reset the pointers at the head of the list:
+- Set the current head’s previous node to the new head
+- Set the new head’s next node to the current head
+- Update the head property to be the new head
+- Finally, if there isn’t a current tail to the list (meaning the list was empty):
+    - Update the tail property to be the new head since that node will be both the head and tail
+
+Add to tail
+
+Since doubly linked lists have a tail property, we don’t have to iterate through the entire list to add to the tail like we did with a singly linked list. The new method will mirror what we did in our .addToHead() method:
+
+- Start by checking to see if there is a current tail to the list
+- If there is (meaning the list is not empty), then we want to reset the pointers at the tail of the list:
+- Set the current tail’s next node to the new tail
+- Set the new tail’s previous node to the current tail
+- Update the tail property to be the new tail
+- Finally, if there isn’t a current head to the list (meaning the list was empty):
+    - Update the head property to be the new tail since that node will be both the head and tail
+
+Remove head
+
+Due to the added tail property, removing the head of the list in a doubly linked list is a little more complicated than doing so in a singly linked list:
+
+- Start by checking if there’s a current head to the list. If there isn’t:
+    - The list is empty, so there’s nothing to return, and the method ends
+- Otherwise, update the list’s head to be the current head’s next node
+- If there is still a head to the list (meaning the list had more than one element when we started):
+    - Set the head’s previous node to null since there should be no node before the head of the list
+- If the removed head was also the tail of the list (meaning there was only one element in the list), call .removeTail() to make the necessary changes to the tail of the list. (We will create this method in the next exercise!)
+- Finally, return the old head
+
+Remove tail
+
+In addition to being able to add to the head of the list, a doubly linked list’s tail property allows us to add to the tail just as easily. In fact, like the .addToHead() and .addToTail() methods, the .removeTail() method will closely mirror the .removeHead() method:
+
+- Start by checking if there’s a current tail to the list. If there isn’t:
+    - The list is empty, so there’s nothing to return, and the method ends
+- Otherwise, update the list’s tail to be the current tail’s previous node
+- If there is still a tail to the list (meaning the list had more than one element when we started):
+    - Set the tail’s next node to null since there should be no node after the tail of the list
+- If the removed tail was also the head of the list (meaning there was only one element in the list), call .removeHead() to make the necessary changes to the head of the list
+- Finally, return the old tail
+
+Remove by data I
+
+In addition to removing the head and the tail of the list, it would also be useful to remove a specific element that could be anywhere in the list. Imagine that you have a list of errands to run. You don’t always do your errands in order, so when you finish doing your laundry, that could be somewhere in the middle of the list. We are going to build a .removeByData() method that will allow you to cross off (remove) that errand no matter where it is in the list.
+
+In order to do this:
+
+- Iterate through the list to find the matching node
+- If there is no matching element in the list:
+    - Return null
+- If there is a matching node, we will then check to see if it is the head or tail of the list:
+    - If so, call the corresponding .removeHead() or .removeTail() method
+- If not, that means the node was somewhere in the middle of the list. In that case:
+    - Remove it by resetting the pointers of its previous and next nodes
+- Finally, return the node
+
+Remove by data II
+
+Now that we’ve found the node that we want to remove from the list (or returned null if it didn’t exist), it’s time to actually remove the node. This means resetting the pointers around the node. There are three cases here:
+
+- The node was the head of the list, in which case we can just call .removeHead()
+- The node was the tail of the list, in which case we can just call .removeTail()
+- The node was somewhere in the middle of the list, in which case we will need to manually change the pointers for its previous and next nodes
+
+Using the doubly linked list
+
+You finished your DoublyLinkedList class! Now we’re going to use that class to model a subway line. A doubly linked list is a great data structure to use to model a subway line, as both have a first and last element, and are comprised of nodes (or stops) with links to the elements before and after them.
+
+We will add to and remove stops from our subway line, and print it out to see what we’ve done. The .printList() method is the same as the one from the LinkedList class and has been provided.
