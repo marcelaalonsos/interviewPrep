@@ -1,0 +1,17 @@
+Why Data Structures?
+
+Data structres are the way we are able to store and retrieve data.
+Data structres handle four main functions for us:
+- inputting information: how data is received
+- processing information: the way that data is manipulated in the data structure
+- maintaining information: how the data is organized within the structure
+- retrieving information: finding and returning data that is stored in the structure
+
+Choosing the best data structure:
+
+1. what is the intended purpose for the data? Do any data structures have built-in functionality that is ideally suited for this purpose?
+2. Do you want or need control over how memory is set aside to store your data? Data structures that use STATIC MEMORY ALLOCATION (e.g., stacks or arrays) will manage memory for you and assume a fixed amount of memory upon instantiation with a cap on how much data may be added. Data structures that utilize DYNAMIC MEMORY ALLOCATION (e.g., heaps or linked lists) allow you to allocate and reallocate memory within the life of the program.
+3. How long will it take different data structures to accomplish various tasks relative to other data structures?
+
+
+

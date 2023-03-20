@@ -1,0 +1,23 @@
+Nodes in JavaScript
+
+Now that you have an understanding of what nodes are, let’s see one way they can be implemented using Javascript.
+
+We will create a basic node that contains data and one link to another node. The node’s data will be specified when creating the node and immutable (can’t be updated). Remember that a node’s link to the next node is null when there are no nodes to traverse.
+
+Go ahead and take a look at the starter code in the editor. You will find the Node class defined. module.exports allows the Node class to be used outside this module. Make sure to always leave this line of code.
+
+Node methods: Set Next Node
+
+Currently when a node is created, the next node is initially set to null, and we do not have a formal way to change it. However, we want to allow the next node to be updated so it can be traversed and used in more complex data structures. For this, we will use a setter to modify this.next node property.
+
+Node methods: Set Next Node Validation
+
+We arbitrarily set our next node to any argument that gets passed in. This can be problematic. Imagine if the next node accidentally gets set to a different data type, like a string. We run the risk of mistakenly confusing the string for a node, and we would have to build out special support to avoid traversing anything that is not a node.
+
+To prevent these unnecessary complications, let’s add in a check that only allows arguments that are instanceof nodes or null. We want to allow null values as an argument in the event that we want to break the link between a node and its next node.
+
+Node Methods: Get Next Node
+
+We could continue accessing the next node property directly, like how we have been doing so far. However, if we ever want it to be given in a special way, we would want to use a getter to handle the preprocessing.
+
+Let’s go ahead and create a simple .getNextNode() method that just returns the next node property.

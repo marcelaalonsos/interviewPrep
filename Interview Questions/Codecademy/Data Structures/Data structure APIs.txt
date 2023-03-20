@@ -1,0 +1,38 @@
+Data Structure APIs
+
+Data structures are all about choosing the right tool for the job. Do you need to store data in an ordered way, or do you just need to be able to store it and retrieve it quickly?
+
+Consider the Array in JavaScript. It’s a really great data structure for storing ordered data because you can retrieve elements by index number. If you want the first element of an array, all you need to do is fetch it with index 0: arrayName[0].
+It also provides all sorts of helpful methods for manipulating elements, such as .push(), .pop(), .sort(), and more. However, if you want to find out if a particular element exists in an array, you may need to iterate through the entire array.
+
+Let’s look at two possibilities of how we’d build storeNumber() and doYouHaveThisNumber() functions.
+Given the following list of numbers:
+
+1, 250, -42, 0.4, 17
+
+const listOfNumbers = [];
+
+const storeNumber = num => listOfNumbers.push(num);
+
+const doYouHaveThisNumber = num => listOfNumbers.includes(num);
+
+In this program, storeNumber() adds a number to the array, and doYouHaveThisNumber() returns true if that number exists in the array, and false otherwise. Looks pretty good, but what if you had 10000000 numbers? doYouHaveThisNumber() might start getting pretty slow, since Array.prototype.includes() iterates through the entire array until it finds the input value.
+
+Let’s try using another built-in data type in JavaScript, the Object. Since all we want to keep track of is whether we received a particular number, we can just store those numbers in an object, and set their values to true if we received them:
+
+const receivedNumbers = {};
+
+const storeNumber = num => receivedNumbers[num] = true;
+
+const doYouHaveThisNumber = num => receivedNumbers[num] === true;
+In this case, we’ll have the same result on the outside, but because retrieving a value from an object is much faster than iterating through an array, the overall result will be faster.
+
+WHAT IS AN API?
+API is an acronym for application programming interface. An API allows end-users to access properties and methods of data structures easily and without needing to do the “behind the scenes” work.
+
+The API of arrays provides lots of useful functionality, from adding and removing elements to the start and end of the array, to iterator methods that call a function on each element. If you wanted to find the smallest number in an array of numbers, however, you’d have to implement that functionality yourself.
+
+CREATING YOUR OWN APIs
+An API is like a message to end-users. Some languages have classes that can have methods or fields that are either public (can be called from anywhere) or private (can only be called from within the class). Public methods are the ones that end-users of that class can call, and private methods are only used by the class itself. JavaScript doesn’t really support this concept, so properties that aren’t meant to be public are often preceded by an underscore _. Let’s look at an example where we want to build a data structure with a restricted API.
+
+A stack is a data structure that only allows data to be added (pushed) or removed (popped) from the “top” of the stack. It just so happens that we could use an array as a stack, since it already has a .push() and .pop() method! However, arrays also allow you to add elements to the beginning or randomly access elements by index.
