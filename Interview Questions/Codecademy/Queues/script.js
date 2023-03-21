@@ -1,3 +1,8 @@
+/*
+We want to create a program using a library of functions from runway.js
+The program will help the air traffic control move planes to the runway and allow those planes to take off in a FIFO order.
+*/
+
 const runway = require("./runway");
 
 const flights = [
