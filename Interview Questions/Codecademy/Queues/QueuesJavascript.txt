@@ -1,0 +1,65 @@
+Introduction: Queues in javascript
+
+As previously mentioned, a queue is a data structure that contains an ordered set of data that follows a FIFO (first in, first out) protocol for accessing that data.
+
+You can visualize it as a checkout line at a supermarket:
+
+- The customer at the front of the line (equivalent to the head in a queue) is the first customer to pay for their groceries.
+
+- Any new customer must go to the back of the line (the tail of the queue) and wait until everyone in front of them has paid for their groceries (no line cutters allowed in this supermarket!)
+
+- The supermarket cashier only needs to check out the customer at the front of the line
+
+Real-life computer science applications of queues are all around us: search algorithms like BFS (breadth-first search), job schedulers that run tasks on our computers, and keyboard processing that interprets our keystrokes are all queue based.
+
+We’ll also set up a few helper methods that will help us keep track of the queue size in order to prevent queue overflow and underflow.
+
+To do this, we’ll make use of some data structures you’ve already seen: nodes and linked lists. Feel free to take a look at the Node.js and LinkedList.js files in the code editor to review how these data structures are implemented and see what methods are available to you to use in this lesson’s exercises.
+
+Queue Methods: Enqueue
+
+Enqueue is a fancy way of saying “add to a queue,” and that is exactly what we’re doing with the .enqueue() method.
+
+When adding a node to a queue, the new node is always added to the end of the queue. If the queue is empty, the node we’re adding becomes both the head and tail of the queue. If the queue has at least one other node, the added node only becomes the new tail.
+
+Let’s put this into action by building out an .enqueue() method for Queue.
+
+Queue Methods: Dequeue
+
+We can add items to the tail of our queue, but we remove them from the head using a method known as .dequeue(), which is another way to say “remove from a queue.”
+
+Our .dequeue() removes the current head and replaces it with the following node. The .dequeue() method should also return the value of the head node.
+
+If the queue has one node, when we remove it, the queue will be empty. If the queue has more than one node, we just remove the head node and reset the head to the following node.
+
+Bounded queues
+
+Some queues require limits on the number of nodes they can have, while other queues don’t. Queues that restrict the number of elements they can store are called bounded queues.
+
+Let’s make our queue a bounded queue. To account for this, we will need to make some modifications to our Queue class so that we can keep track of and limit size where needed.
+
+We’ll be adding a new property to help us out here:
+
+- .maxSize, a property that bounded queues can utilize to limit the total node count
+
+In addition, we will add two new methods:
+
+- .hasRoom() returns true if the queue has space to add another node
+
+- .isEmpty() returns true if the size of a queue is 0
+
+Avoiding underflow
+
+There are two conditions when enqueuing and dequeuing that we should be aware of and avoid: underflow and overflow.
+
+Underflow occurs when we try to remove elements from an already empty queue – we cannot remove a node if it doesn’t exist. Underflow affects queues whether they are bounded or unbounded.
+
+Let’s add code that will check for underflow when we attempt to dequeue.
+
+Avoiding overflow
+
+Overflow occurs when we add an element to a queue that does not have room for a new node.
+
+This condition affects bounded queues because they have fixed sizes they cannot exceed. For unbounded queues, though they don’t have a size restriction, at some point the size of the queue will exceed the available memory we can use to store this queue.
+
+We’ll be adding code to our Queue class to check for overflow whenever we try to add a node to a queue.
