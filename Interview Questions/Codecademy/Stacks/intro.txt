@@ -1,0 +1,9 @@
+Stacks
+
+Stacks are another data structure with a perfectly descriptive name. Like a queue, a stack is a linear collection of nodes that adds (pushes) data to one end of the data structure (let’s say the top, for the purposes of this example). However, unlike a queue, a stack removes data (pops) from the same end of the data structure. Think of it as a stack of books, where you can only pick up the top book, and add a new book to the top.
+
+Stacks are often thought of as a “First In, Last Out” (FILO) data structure — the first book you add to the stack won’t be removed until all other books are removed from the stack.
+
+Queues on the other hand are thought of as a “First In, First Out” (FIFO) data structure — the first person in line will be the first person to leave the line.
+
+A real-world computing example of a stack is a web browser’s back/forward function, which is something you will model with a project in JavaScript!

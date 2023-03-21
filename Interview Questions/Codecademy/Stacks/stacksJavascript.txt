@@ -1,0 +1,39 @@
+Introduction
+
+You have an understanding of how stacks work in theory, so now let’s see how they can be useful out in the wild — with Javascript!
+
+Remember that there are three main methods that we want our stacks to have:
+
+- Push - adds data to the top of the stack
+- Pop - provides and removes data from the top of the stack
+- Peek - provides data from the top of the stack without removing it
+
+We also need to consider the stack’s size and tweak our methods a bit so that our stack does not overflow.
+
+Let’s get started building out our Stack class.
+
+Push and Pop
+
+The stack’s .push() and .pop() methods are our tools to add and remove items from it. .pop() additionally returns the value of the item it is removing.
+
+Keep in mind that we can only make modifications to the top of the stack.
+
+Size I
+
+With stacks, size matters. If we’re not careful, we can accidentally over-fill them with data. Since we don’t want any stack overflow, we need to go back and make a few modifications to our methods that help us track and limit the stack size so we can keep our stacks healthy.
+
+What do we do if someone tries to .peek() or .pop() when our stack is empty?
+
+How do we keep someone from .push()ing to a stack that has already reached its limit?
+
+How do we even know how large our stack has gotten?
+
+Size II
+
+It’s time to add a couple helper methods.
+
+Helper methods simplify the code we’ve written by abstracting and labeling chunks of code into a new function.
+
+First, we want one that checks if our stack has room for more items. We can use this in .push() to guard against pushing items to our stack when it’s full.
+
+Second, it’s helpful to have a method that checks if the stack is empty…
