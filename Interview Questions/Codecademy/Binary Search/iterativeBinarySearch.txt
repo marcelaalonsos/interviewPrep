@@ -1,0 +1,88 @@
+Iterative Binary Search
+
+Implement an iterative binary search function.
+
+The function will:
+- accept and array of numbers and a value as arguments
+- return the index of the value if it is present in the array
+- return null if a value is not in the array
+
+You will test your function by inputting the array shown in the gif to the right as an argument. By the end of this lesson, the following JavaScript code will print 6 to the console.
+
+const searchable = [1, 2, 7, 8, 22, 28, 41, 58, 67, 71, 94];
+const target = 41;
+
+console.log(binarySearch(searchable, target)) // 6
+In the code above, also shown visually to the right, we use the binarySearch() function to find the index in searchable that is equal to 41. The index is 6.
+
+Finding the middle index
+
+A key step in each binary iteration is to find the middle value of the current list context. In practive, we do this by tracking the first and last indices, then finding their average.
+
+The first index we check will always be the middle value of the original list. Because of this, we start by setting the following first (left) and last (right) indices.
+
+function binarySearch (arr, target)
+  left = 0
+  right = length of array
+
+now we calculate de middle index of the array:
+function binarySearch (arr, target)
+  left = 0
+  right = length of array
+  indexToCheck = the floor integer of (left + right) / 2
+
+The above function will calculate the middle index of the array by calculating the average of right and left and rounding it to the floor integer. Given left is zero and right is n.
+
+floor = (11+0) /2 = 5
+
+so the first index the function checks is 5
+
+Now yoy know how to calculate the first indexToCheck.
+
+CHECKING THE MIDDLE index
+
+Let's consider how to implement an approach to check whether the value at indexToCheck is equal to the target value.
+
+function binarySearch (arr, target)
+  left = 0
+  right = lenght of arr
+
+  indexToCheck = the floor integer of (left + right) /2
+
+  checking = value of arr at indexToCheck
+
+  if checking is the target
+    return indexToCheck
+
+In the example above, we set a variable called checking to the value in arr at the position indexToCheck. then we return the index if its equal to the target value.
+
+ITERATIVE CHECKING
+
+at this point, you have a function that checks the middle index of an input array and returns the index if the value equals the target.
+Let's consider how to extend the function to iteratively check sublists when the middle value is not equal to the target.
+
+the function continues to execute until the left and right indices converge or the target is found:
+
+while right is greater than left
+  indexToCheck = the floor integer of (left + rught) / 2
+  checking = value of arr at indexToCheck
+
+  if checking is the target
+    then return indexToCheck
+
+the above code will execute infinitely because our right and left variables do not converge from one iteration to the next. to address this issue, in addition to checking if the current value is the target, we need to adjust rhe right or left index with each iteration:
+while right is greater than left
+  indexToCheck = the floor integer of (left + right) / 2
+  checking = value of arr at indexToCheck
+
+  if checking is the target
+    then return indexToCheck
+  if target is greater than checking
+    then set left to indexToCheck + 1
+  else
+    set right to indexToCheck
+
+in the code above we set left or right index to a new value based on whether target is greater than or less than checking.
+The above while loop will continue to execute until the left index is greater than the right index.
+
+
