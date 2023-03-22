@@ -1,0 +1,9 @@
+Tree Detail
+
+Trees grow downwards in computer science and a root node is at the very top.
+The root node could also be a parent node if it has child nodes.
+Children nodes with the same parent node are siblings.
+It is common to have nodes act as both parent and child to different nodes within a tree.
+When a node has no children, we refer to it as a leaf node.
+
+These terms: root, leaf, child, sibling, and parent give us a precise way to communicate the relationships between nodes.

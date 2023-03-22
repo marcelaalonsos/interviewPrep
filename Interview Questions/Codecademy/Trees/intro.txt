@@ -1,2 +1,16 @@
 Trees Introduction
 
+Trees are an essential data structure for shoring hierarchical data with a directed flow.
+Similar to linked lists and graphs, trees are composed of nodes which hold data. The diagram represents nodes as rectangles and data as text.
+
+Nodes also store references to zero or more other tree nodes. Data moves down from node to node. We depict those references as lines drawn between rectangles.
+
+Trees are often displayed with a single node at the top and connected nodes branching downwards.
+
+ex. a company's organization chart or a computer's file directory are both real-world examples that can be represented as trees.
+
+NODE TREE TERMINOLOGY
+
+PARENT - ROOT NODE
+CHILD - CONNECTION BETWEEN CHILDREN IS SIBLINGS
+LEAF - THE LAST NODE IN A BRANCH

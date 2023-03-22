@@ -1,0 +1,7 @@
+Depth First Tree Traversal
+
+Depth-first traversal visits the first child in the children array and that node's children Recursively before visiting its siblings and their children Recursively.
+
+For each node
+  display its data
+  For each child in children, call itself recursively
