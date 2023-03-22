@@ -1,0 +1,10 @@
+Review
+
+- we use asymptotic notation to describe the runtime of a program. The three types of asymptotic notation are big Theta, big Omega, and big O.
+- we use big Theta to describe the runtime if the runtime of the program is the same in every case.
+- the different common runtimes from fastest to slowest are: Θ(1), Θ(log N), Θ(N), Θ(N log N), Θ(N2), Θ(2N), Θ(N!)
+- we use big Omega to describe the best-case running time of a program
+- we use big 0 to describe the worst-case running time of a program
+- we typically describe a program's running time in terms of big O
+- when finding the runtime of a program with multiple steps, you can divide the program into different sections and add the runtimes of te various sections. You can then take the slowest runtime and use that runtime to describe the entire program.
+- when analyzing the runtime of a program. we care about which part of the program is the slowest.
