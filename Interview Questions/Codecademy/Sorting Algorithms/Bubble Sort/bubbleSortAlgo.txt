@@ -1,0 +1,39 @@
+Intro to Bubble Sort
+
+The bubble sort algorithm takes an array of elements and reorders the elements of the inout from smallest to largest. To achieve this, bubble sort works by comparing a pair of neighboring elements and swapping their positions in the array so that the larger of the two elements is always on the right.
+Doing this continuously results in the largest element 'bubbling' up to the end of the array, giving this sort its name.
+The algorithm only stops when there are no more values that need to be swapped.
+
+pseudocode:
+
+while array is not sorted
+  for each value in array
+    if current value > next value
+      swap current value and next value
+return array
+
+Bubble sort is not the most efficient sorting algorithm. Bubble sort’s worst-case runtime is O(n^2). This is because we have to compare the current element we are looking at, to each element in the array after it and repeat this check for every single element in the array. Its best-case runtime is O(n) for an already-sorted list.
+
+LOOPS
+
+In order to sort an array, we'll need to visit pairs of elements and check if they should be moved or kept at their current index.
+We'll use two loops:
+- one loop that will execute an inner loop depending on the state of a variable representing whether the input might be sorted or not
+- an inner loop to compare and swap pairs of elements in the array
+
+SWAP
+
+An essential part of bubble sort is the swapping of pairs of unsorted elements.
+To swap pairs of elements, we'll need to store one of the values at either index in a temporary variable so we can use it later.
+For example, doing something like this:
+currentValue = nextValue;
+nextValue = currentValue;
+
+would not work because we’d “lose” one of the values. The original value of currentValue would be overwritten and there would be no reference to it. Using the temporary variable strategy avoids the loss of any of the values whose position we need to exchange.
+
+We’ll employ this strategy to finish building out swap().
+
+COMPARE
+
+We have a loop to run our algorithm, and another that visits each element in the input array but if we were to run this as is, it would only iterate through the array once.
+Add logic that will compare neighboring elements and swap them if necessary.
