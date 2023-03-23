@@ -1,0 +1,7 @@
+Breadth-First Search (BFS) Conceptual
+
+BFS checks the values of all neighboring vertices before moving into another level of depth.
+This is an incredibly inefficient way to find any path between two points, but it's an excellent way to identify the shortest path between two vertices.
+Because of this, BFS is helpful for figuring out directions from one place to another.
+
+Unlike DFS, BFS graph search implementations use a queue data structure to keep track of the current vertex and vertices that still have unvisited neighbors. in BFS search a vertex is dequeued when all neighnoring vertices have been visited.

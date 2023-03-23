@@ -1,0 +1,9 @@
+Depth-First Search (DFS) Conceptual
+
+Depth-first search algorithms check the values along a path of vertices before moving to anoter path.
+
+While this isn't exactly ideal when you want to find the shortest path between two points, DFS can be very helpful for determining if a path even exists.
+
+In order to accompish this path-finding feat, DFS implementations use either a stack data structure, or more commonly, recursion to keep track of the path the search is on and the current vertex.
+
+In a stack implementation, the most recently added vertex is popped off the stack when the search has reached the end of the path. Meanwhile, in a recursive implementation, the DFS function is recursively called for each connected vertex.
