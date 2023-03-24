@@ -1,1 +1,6 @@
 Introduction
+- if you want to pass a linked list to a function, you only need to pass a reference to the head node, by accessing the next property of every node, you have access to the full sequential list.
+- to traverse through the list, we will need a couple fo variables:
+  - current: current node of the linked list we're iterating through
+  - look at the next node = current.next
+  - we can stop algorithm when current = null
