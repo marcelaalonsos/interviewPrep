@@ -1,0 +1,14 @@
+1. Given an array of n elements, how many different pairs of elements can be formed?
+there are n^2 possible pairs
+
+2. Given an array of n elements, how many different triplets of elements can be formed?
+there are n^3 possible triplets
+
+3. what is the big O time complexity of searching for an element in an array?
+O(n) linear time
+
+4. What is the big O time complexity of searching for an item in a set?
+O(1) constant time
+
+5. What is the big O time complexity of searching for a key in an object?
+O(1) constant time

@@ -24,3 +24,10 @@ const isPrime = (n) => {
   }
   return true;
 };
+
+//analysis
+/*
+n = input number
+time: O( sqrt n)
+space: O(1);
+*/

@@ -30,3 +30,10 @@ const maxValue = (nums) => {
   }
   return max;
 };
+
+//analysis
+/*
+n = length of the array
+time: O(n)
+space: O(1);
+*/

@@ -47,3 +47,11 @@ const anagrams = (s1, s2) => {
   }
   return true;
 };
+
+//analysis
+/*
+n = length of string 1
+m = length of string 2
+time: O(n + m)
+space: O(n + m);
+*/

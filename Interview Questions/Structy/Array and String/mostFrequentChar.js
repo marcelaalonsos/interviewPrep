@@ -47,3 +47,10 @@ const mostFrequentChar = (s) => {
   //return the most frequent char
   return most;
 };
+
+//analysis
+/*
+n = length of string
+time: O(n)
+space: O(n);
+*/

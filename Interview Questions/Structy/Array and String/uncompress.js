@@ -66,3 +66,11 @@ const uncompress2 = (s) => {
   }
   return result.join("");
 };
+
+//analysis
+/*
+n = number of groups
+m = max num found in any group
+time: O(n*m)
+space: O(n*m);
+*/

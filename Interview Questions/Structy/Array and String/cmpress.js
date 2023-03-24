@@ -39,3 +39,10 @@ const compress = (s) => {
   }
   return result.join("");
 };
+
+//analysis
+/*
+n = length of string
+time: O(n)
+space: O(n);
+*/
