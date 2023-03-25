@@ -1,0 +1,17 @@
+1. what is the optimal complexity we can achieve for searching a target value in a standard, singly linked list?
+- O(n) time and O(1) space if we do it iteratively. The recursive solution would be less optimal at O(n) time and O(n) space.
+
+2. what is the dummyHead pattern for linked lists?
+- the dummyHead pattern is where we use a fake node to act as the head of the linked list. the dummy node is used to simplify edge cases such as inserting the first node into an 'empty' linked list
+
+3. What two properties are typically stored in the nodes of a singly linked-list?
+- value and next. The value is the data being stored and next is a reference to the next sequential node in the list.
+
+4. what term is commonly used to describe the 'first node' of a linked list?
+- head
+
+5. why might the expression current.next.val be unsafe?
+- if the current is the tail node, the expression throws an error because current.next is null and null does not have a val property
+
+6. what term is commonly used to describe the 'last node' of a linked list?
+- tail
