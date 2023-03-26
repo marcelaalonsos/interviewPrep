@@ -1,0 +1,16 @@
+Intro to Binary Trees
+- You can store numbers, string, and other objects in the nodes
+- Parent -> child relationship: relationship between nodes in a Trees
+- Root is a node with no Parent
+- Leaf is a node that has no children
+- Edges are the connections between nodes
+
+A binary tree is a tree that at most has 2 children
+- a node in a binary tree could have less than 2 children
+- exactly one root
+- exactly one path between root and any node
+- an empty tree can be considered a binary tree
+
+Every node could be an object - an instance of a class
+Nodes store: current value, but also refer to children (node.left, node.right)
+
