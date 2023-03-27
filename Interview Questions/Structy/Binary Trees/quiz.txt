@@ -1,0 +1,19 @@
+Binary Tree Quiz
+
+1. in a binary tree, what term is used to describe the nodes that have no children?
+- leaf nodes
+
+2. in a binary tree, what term is used to describe a single node that has no parent?
+- root node
+
+3. what data structures are used to implement depth-first and breadth-first traversal?
+- stacks for depth first, and queues for breadth first
+
+4. what are 2 different ways to implement a depth-first traversal?
+- iterative and recursive
+
+5. what is the least number of nodes a binary tree may have?
+- zero nodes. an empty tree is considered a binary tree
+
+6. what does the word binary in binary tree mean?
+- each node in a binary tree has at most 2 children
