@@ -1,0 +1,46 @@
+Intro to Graphs
+
+A graph is just a collection of nodes and edges
+- nodes have data in them, also called vertex
+- edges are connections between nodes
+
+Graphs can illustrate narrative problems
+
+A directed graph has arrowhead to edges pointing to vertexes
+An undirected graph is all connected and not restricted
+
+A neighbor node (vertex) is a node accessible from a starting node
+
+How to implement graphs in algorithms:
+- Adjacency lists as a hash map
+- key/value pair
+- keys are nodes, values are arrays of neighbors of that node
+
+Depth-First Traversal
+- exhaust paths down first, starting at one node
+- uses a stack
+
+Breadth-First Traversal
+- goes through neighbors first
+- uses a queue
+
+Any differences?
+- they both explore the nodes but in different order
+- in a large graph, a breadth-first might be faster to traverse
+
+depth-first pseudocode:
+take starting node and initialize stack with that node
+while stack is not empty
+pop top of stack and that is the current
+push neighbors to the stack
+when stack is empty, all nodes have been seen
+
+breadth-first pseudocode:
+take starting node and initialize queue with that node
+while queue is not empty
+shift front of queue and that is the current
+push neighbors to the stack
+when queue is empty, all nodes have been seen
+
+
+
