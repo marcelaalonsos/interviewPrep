@@ -51,3 +51,10 @@ const cycleDetect = (graph, node, visiting, visited) => {
 
   return false;
 };
+
+//analysis
+/*
+n = number of nodes
+Time: O(n^2)
+Space: O(n)
+*/
