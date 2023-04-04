@@ -39,22 +39,32 @@ class ListNode {
 }
 
 const mergeKLists = (lists) => {
+  //create an empty array to put values of linked lists
   let listOfValues = [];
+  //iterate through linkedlists to extract valued
   lists.forEach((linkedList) => {
+    //while the list is not null
     while (linkedList) {
+      //push the values into the array
       listOfValues.push(linkedList.val);
+      //set the node to the next node
       linkedList = linkedList.next;
     }
   });
+  //sort the array
   listOfValues.sort((a, b) => a - b);
-
+  //create a holder for the linked list
   let headHolder = new ListNode();
+  //set the head as the current node
   let current = headHolder;
-
+  //take the array and map it to the linked list
   listOfValues.map((x) => {
+    //x is the node values
+    //set a new nodeList with the next value of current
     current.next = new ListNode(x);
+    //set current to be next value
     current = current.next;
   });
-
+  //return the next value of head
   return headHolder.next;
 };
